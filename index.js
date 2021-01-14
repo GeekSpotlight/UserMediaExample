@@ -16,8 +16,14 @@ const httpsServer = https.createServer({
 }, app);
 
 
+// To serve index.html and script.js as static files.
 app.get('/', express.static(path.join(__dirname, '/public')));
 app.use("/js", express.static(path.join(__dirname, '/public/js')));
+
+
+// app.listen(httpPort, () => {
+//   console.log(`Express HTTP Server running on port ${httpPort}`);
+// });
 
 httpServer.listen(httpPort, () => {
     console.log(`HTTP Server running on port ${httpPort}`);
