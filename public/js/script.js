@@ -1,6 +1,7 @@
+let streamGlobal;
+
 document.getElementById('openCamera').addEventListener('click', e => openCamera(e));
 document.getElementById('stopCamera').addEventListener('click', e => stopCamera(e));
-let streamGlobal;
 
 function stopCamera() {
 	if (!streamGlobal) {
